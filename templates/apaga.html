@@ -1,0 +1,30 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+
+	<title>Apagar</title>
+
+	<section>
+		<form action="#" method="POST">
+
+			<h1>Apagar o cadastro do poste:</h1>
+            <hr>
+            <h5>
+                <strong class="azul">ID: </strong>{{mostra.id}}<br>
+                <strong class="azul">CÓDIGO: </strong>{{mostra.codigo}}<br>
+                <strong class="azul">RUA: </strong>{{mostra.rua}}<br>
+                <strong class="azul">BAIRRO: </strong>{{mostra.bairro}}<br>
+                <strong class="azul">CIDADE: </strong>{{mostra.cidade}}<br>
+            </h5>
+
+                    <a href="/delete/{{mostra.id}}"><button class="azulp" type="button" >APAGAR</button></a>
+
+                    <a href="/postescadastrados"><button class="vermelho" type="button" >CANCELAR</button></a>
+
+			<p class="dev">Site criado para Projeto Integrador II - Univesp &copy
+				Polos: Bertioga/Queluz/São Bernardo do Campo</p>
+
+		</form>
+	</section>
+
+    {% endblock %}

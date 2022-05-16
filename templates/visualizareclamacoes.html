@@ -1,0 +1,29 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+
+    <title>Visualizar Reclamações</title>
+
+    <section>
+		<form action="#" method="POST">
+
+            <h5>
+                <strong class="azul">ID: </strong>{{informa.id}}<br>
+                <strong class="azul">CÓDIGO: </strong>{{informa.codigo}}<br>
+                <strong class="azul">NOME: </strong>{{informa.nome}}<br>
+                <strong class="azul">CPF: </strong>{{informa.cpf}}<br>
+                <strong class="azul">TELEFONE: </strong>{{informa.telefone}}<br>
+                <strong class="azul">E-MAIL: </strong>{{informa.email}}<br>
+                <strong class="azul">DESCRIÇÃO: </strong>{{informa.descricao}}<br>
+            </h5>
+
+			<a><button class="vermelho" type="button" onclick="mudaTelaVoltaAoBancoPro()">VOLTAR</button></a>
+
+			<p class="dev">Site criado para Projeto Integrador II - Univesp &copy
+				Polos: Bertioga/Queluz/São Bernardo do Campo</p>
+
+		</form>
+
+	</section>
+
+     {% endblock %}

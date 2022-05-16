@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<title>Tela 2</title>
+
+<section>
+
+	<form action="#" method="POST">
+
+		<h1>Digite o código encontrado no QRCode</h1>
+
+		<fieldset>
+			<div class="container">
+				<input type="text" required name="codigo" autofocus>
+				<label>Insira o código</label>
+			</div>
+		</fieldset>
+
+		<a><button type="button" onclick="mudaTela2()">VERIFICAR</button></a>
+
+		<p class="dev">Site criado para Projeto Integrador II - Univesp &copy
+			Polos: Bertioga/Queluz/São Bernardo do Campo</p>
+
+	</form>
+
+</section>
+{% endblock %}

@@ -1,0 +1,73 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+
+   <title>Postes Cadastrados</title>
+
+<main>
+
+    <section class="container">
+
+        <section id="cadastrei"><!-- ver comentei -->
+            <table>
+                <thead>
+                <tr>
+                    <th>Ações</th>
+                    <th>#</th>
+                    <th>Código</th>
+                    <th>Rua</th>
+                    <th>Bairro</th>
+                    <th>Cidade</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {% for m in postes %}
+                <tr>
+                    <td>
+                        <a href="/visualizapostes/{{m.id}}">Visualizar</a><br><br>
+                        <a href="/apaga/{{m.id}}">Apagar</a>
+                    </td>
+                    <td>{{m.id}}</td>
+                    <td>{{m.codigo}}</td>
+                    <td>{{m.rua}}</td>
+                    <td>{{m.bairro}}</td>
+                    <td>{{m.cidade}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        {% if mostra != undefined %}
+        <section class="modal">
+
+            <div id="card">
+                <h2>Apagar o cadastro do poste:</h2>
+                <hr>
+                <p><strong>ID: </strong>"{{mostra.id}}"<br>
+                <strong>Código: </strong>"{{mostra.codigo}}"<br>
+                <strong>Rua: </strong>"{{mostra.rua}}"<br>
+                <strong>Bairro: </strong>"{{mostra.bairro}}"<br>
+                <strong>Cidade: </strong>"{{mostra.cidade}}"<br></p>
+
+                <div id="btns">
+                    <a class="btn-cancelar" href="/#cadastrei">Cancelar</a><!-- ver comentei -->
+                    <a class="btn-apagar" href="/delete/{{mostra.id}}">Apagar</a>
+                </div>
+            </div>
+
+        </section>
+        {% endif %}
+
+    </section>
+
+</main>
+
+    <footer>
+        <div>
+            <a href="/administrativa" id="topo"><img src="../static/imagens/Voltar.png" alt="Voltar para a tela administrativa"></a>
+        </div>
+    </footer>
+
+{% endblock %}

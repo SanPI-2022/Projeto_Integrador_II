@@ -1,0 +1,27 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+
+    <title>Visualizar Poste</title>
+
+    <section>
+		<form action="#" method="POST">
+
+            <h5>
+                <strong class="azul">ID: </strong>{{mostra.id}}<br>
+                <strong class="azul">CÓDIGO: </strong>{{mostra.codigo}}<br>
+                <strong class="azul">RUA: </strong>{{mostra.rua}}<br>
+                <strong class="azul">BAIRRO: </strong>{{mostra.bairro}}<br>
+                <strong class="azul">CIDADE: </strong>{{mostra.cidade}}<br>
+            </h5>
+
+			<a><button class="vermelho" type="button" onclick="mudaTelaVoltaAoBancoPos()">VOLTAR</button></a>
+
+			<p class="dev">Site criado para Projeto Integrador II - Univesp &copy
+				Polos: Bertioga/Queluz/São Bernardo do Campo</p>
+
+		</form>
+
+	</section>
+
+     {% endblock %}

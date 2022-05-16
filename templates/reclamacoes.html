@@ -1,0 +1,56 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+
+   <title>Reclamações Cadastradas</title>
+
+<main>
+
+    <section class="container">
+
+        <section id="cadastrei"><!-- ver comentei -->
+            <table>
+                <thead>
+                <tr>
+                    <th>Ações</th>
+                    <th>#</th>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Cpf</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Descrição</th>
+               </tr>
+               </thead>
+
+                <tbody>
+                {% for m in problemas %}
+                <tr>
+                    <td>
+                        <a href="/visualizareclamacoes/{{m.id}}">Visualizar</a><br>
+
+                    </td>
+                    <td>{{m.id}}</td>
+                    <td>{{m.codigo}}</td>
+                    <td>{{m.nome}}</td>
+                    <td>{{m.cpf}}</td>
+                    <td>{{m.telefone}}</td>
+                    <td>{{m.email}}</td>
+                    <td>{{m.descricao}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+    </section>
+
+</main>
+
+
+        <div>
+            <a href="/administrativa" id="topo"><img src="../static/imagens/Voltar.png" alt="Voltar para a tela administrativa"></a>
+        </div>
+
+
+{% endblock %}
