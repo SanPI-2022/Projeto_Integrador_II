@@ -10,4 +10,13 @@ Meu nome é Sandro e sou aluno da Universidade Virtual do Estado de São Paulo -
 
 Curso = Bacharelado em Tecnologia da Informação - Turma 2020
 
-A idéia desse projeto é do grupo de PI-II Polos: Bertioga, Queluz e São Bernardo do Campo - SP - 2022
+Ferramentas utilizadas no desenvolvimento:
+Git
+IDE Pycharm com interpretador Python
+Flask
+API QRCode do Google
+SQLite
+HTML
+CSS
+Javascript
+Requisitos instalados para hospedagem no Heroku
