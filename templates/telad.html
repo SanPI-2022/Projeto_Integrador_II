@@ -1,0 +1,64 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+
+
+	<title>Cadastrar Informações</title>
+
+	<section id="novo">
+		<form action="#" method="post">
+
+			<h1>Poste de iluminação</h1>
+
+            <fieldset>
+				<div class="container">
+					<input type="text" maxlength="50" id="codigo" name="codigo" value="{{ post['codigo'] }}" readonly>
+					<label class="ficaemcima">Código</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div class="container">
+					<input type="text" maxlength="50" id="nome" name="nome" autofocus required/>
+					<label>Insira seu Nome</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div class="container">
+					<input type="text" maxlength="14" id="cpf" name="cpf"
+						   pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite desta forma: XXX.XXX.XXX-XX" required/>
+					<label>Insira seu CPF xxx.xxx.xxx-xx</label>
+				</div>
+			</fieldset>
+
+            <fieldset>
+				<div class="container">
+					<input type="text" maxlength="50" id="telefone" name="telefone" required/>
+					<label>Insira seu Telefone</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div class="container">
+					<input type="email" maxlength="50" id="email" name="email" required/>
+					<label>Insira seu E-mail</label>
+				</div>
+			</fieldset>
+
+            <fieldset>
+                <div class="container">
+                    <input type="text" maxlength="300" id="descricao" name="descricao" required/>
+					<label>Descreva o problema</label>
+                </div>
+			</fieldset>
+
+			<a><button type="submit">ENVIAR</button></a>
+			<a><button class="vermelho" type="button" onclick="mudaTelaC()">CANCELAR</button></a>
+
+			<p class="dev">Site criado para Projeto Integrador II - Univesp &copy;
+				Polos: Bertioga/Queluz/São Bernardo do Campo</p>
+		</form>
+	</section>
+
+    {% endblock %}

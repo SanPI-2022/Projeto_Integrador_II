@@ -1,0 +1,76 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+
+	<title>Protocolo</title>
+
+	<section>
+		<form action="#" method="POST">
+
+			<h1>Poste de iluminação</h1>
+
+            <fieldset>
+			    <div class="container">
+			        <input  type="text" name="texto" id="protocolo" readonly>
+		       		<label class="ficaemcima">Protocolo</label>
+			    </div>
+			</fieldset>
+
+            <h1>Reclamação recebida</h1>
+
+            <h1>Resolveremos o mais breve possivel</h1>
+
+            <h1>Obrigado pela informação!</h1>
+
+
+			<a><button type="button" onclick="copiarProtocolo()" id="copiar">COPIAR PROTOCOLO</button></a>
+
+			<a><button class="vermelho" type="button" onclick="mudaTela5()">SAIR</button></a>
+
+			<p class="dev">Site criado para Projeto Integrador II - Univesp &copy;
+				Polos: Bertioga/Queluz/São Bernardo do Campo</p>
+
+		</form>
+	</section>
+
+	<script type="text/javascript">
+
+	function pegarData() {
+
+    let diaDaSemana = dataHora.getDay()
+    let dia = dataHora.getDate()
+    let mes = dataHora.getMonth()+1
+    let ano = dataHora.getFullYear()
+
+    let strDia = new String(dia)
+    let strMes = new String(mes)
+
+    if(strDia.length == 1) mes = '0' + dia
+    if(strMes.length == 1) mes = '0' + mes
+
+
+    let dataAtual = dia + '/' + mes + '/' + ano
+
+    semana.textContent = diaDaSemana
+    data.textContent = dataAtual
+
+}
+
+    var options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+    }
+
+    let teste = new Date()
+
+    var teste2 = (teste.toLocaleString('pt-BR', options))
+
+    var teste4 = (teste.toLocaleTimeString('pt-BR'))
+
+    document.getElementById("protocolo").value = "Protocolo: " + Math.floor(100000 + Math.random() * 900000) + " PI-II " + teste2 + " " + teste4;
+
+	</script>
+
+    {% endblock %}
